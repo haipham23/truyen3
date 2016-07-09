@@ -1,0 +1,64 @@
+{
+  "name": "Book",
+  "base": "Model",
+  "properties": {},
+  "methods": {
+    "saveBook": {
+      "accepts": [{
+        "arg": "book",
+        "type": "Object",
+        "http": {
+          "source": "body"
+        }
+      }],
+      "returns": {
+        "arg": "status",
+        "type": "string"
+      },
+      "http": {
+        "verb": "post"
+      }
+    },
+    "updateBook": {
+      "accepts": [{
+        "arg": "book",
+        "type": "Object",
+        "http": {
+          "source": "body"
+        }
+      }],
+      "returns": {
+        "arg": "status",
+        "type": "string"
+      },
+      "http": {
+        "verb": "post"
+      }
+    },
+    "getAll": {
+      "returns": {
+        "arg": "books",
+        "type": "Object"
+      },
+      "http": {
+        "verb": "get"
+      }
+    },
+    "getOne": {
+      "accepts": [{
+        "arg": "bid",
+        "type": "string",
+        "http": {
+          "source": "query"
+        }
+      }],
+      "returns": {
+        "arg": "book",
+        "type": "Object"
+      },
+      "http": {
+        "verb": "get"
+      }
+    }
+  }
+}

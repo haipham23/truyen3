@@ -1,0 +1,57 @@
+{
+  "GENERAL": {
+    "name": "General",
+    "message": "General Error",
+    "code": "GE001"
+  },
+  "BOOK_SAVE": {
+    "name": "BOOK_SAVE",
+    "message": "Failed to save a book",
+    "code": "B001"
+  },
+  "BOOK_UPDATE": {
+    "name": "BOOK_UPDATE",
+    "message": "Book is failed to update",
+    "code": "B002"
+  },
+  "BOOK_GETONE": {
+    "name": "BOOK_GETONE",
+    "message": "Cannot get a get a book",
+    "code": "B003"
+  },
+  "BOOK_GETALL": {
+    "name": "BOOK_GETALL",
+    "message": "Cannot get all books",
+    "code": "B004"
+  },
+  "BOOK_REMOVE": {
+    "name": "BOOK_REMOVE",
+    "message": "Book is failed to remove",
+    "code": "B005"
+  },
+  "CHAPTER_SAVE": {
+    "name": "CHAPTER_SAVE",
+    "message": "Failed to save a chapter",
+    "code": "C001"
+  },
+  "CHAPTER_UPDATE": {
+    "name": "CHAPTER_UPDATE",
+    "message": "Chapter is failed to update",
+    "code": "C002"
+  },
+  "CHAPTER_GETONE": {
+    "name": "CHAPTER_GETONE",
+    "message": "Cannot get a chapter",
+    "code": "C003"
+  },
+  "CHAPTER_TOC": {
+    "name": "CHAPTER_TOC",
+    "message": "Cannot get a table of content",
+    "code": "C004"
+  },
+  "CHAPTER_REMOVE": {
+    "name": "CHAPTER_REMOVE",
+    "message": "Chapter is failed to remove",
+    "code": "C005"
+  }
+}

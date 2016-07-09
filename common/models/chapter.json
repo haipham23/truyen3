@@ -1,0 +1,77 @@
+{
+  "name": "Chapter",
+  "base": "Model",
+  "properties": {},
+  "methods": {
+    "saveChapter": {
+      "accepts": [{
+        "arg": "chapter",
+        "type": "Object",
+        "http": {
+          "source": "body"
+        }
+      }],
+      "returns": {
+        "arg": "status",
+        "type": "string"
+      },
+      "http": {
+        "verb": "post"
+      }
+    },
+    "updateChapter": {
+      "accepts": [{
+        "arg": "chapter",
+        "type": "Object",
+        "http": {
+          "source": "body"
+        }
+      }],
+      "returns": {
+        "arg": "status",
+        "type": "string"
+      },
+      "http": {
+        "verb": "post"
+      }
+    },
+    "getTocByBid": {
+      "accepts": [{
+        "arg": "bid",
+        "type": "string",
+        "http": {
+          "source": "query"
+        }
+      }],
+      "returns": {
+        "arg": "toc",
+        "type": "Object"
+      },
+      "http": {
+        "verb": "get"
+      }
+    },
+    "getOne": {
+      "accepts": [{
+        "arg": "bid",
+        "type": "string",
+        "http": {
+          "source": "query"
+        }
+      }, {
+        "arg": "cid",
+        "type": "number",
+        "http": {
+          "source": "query"
+        }
+      }],
+      "returns": {
+        "arg": "chapter",
+        "type": "Object"
+      },
+      "http": {
+        "verb": "get"
+      }
+    }
+  }
+}
