@@ -1,10 +1,12 @@
 {
   "ids": {
-    "ManagerHost": 2,
+    "ManagerHost": 3,
     "LoadBalancer": 1
   },
   "models": {
-    "ManagerHost": {},
+    "ManagerHost": {
+      "e0b7df09-5251-4495-acae-3f7d8176ab58": "{\"id\":\"e0b7df09-5251-4495-acae-3f7d8176ab58\",\"host\":\"45.32.34.130\",\"port\":8701,\"actions\":[\"delete\",\"edit\"],\"protocol\":\"http\",\"created\":1469088717858,\"error\":{\"message\":\"connect ETIMEDOUT 45.32.34.130:8701\"},\"errorType\":\"unknown\",\"app\":null,\"processes\":null}"
+    },
     "LoadBalancer": {}
   }
 }
