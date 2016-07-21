@@ -1,12 +1,10 @@
-'use strict';
-
-const process = require('process');
-
 module.exports = {
-  'mongodb': {
+  db: {
     connector: 'mongodb',
-    hostname: process.env.MONGODB_SERVICE_HOST || '192.168.99.100' ,
-    port: process.env.MONGODB_SERVICE_PORT || '32769',
-    database: process.env.MONGODB_DATABASE || 'truyen'
+    hostname: process.env.MONGODB_SERVICE_HOST,
+    port: process.env.MONGODB_SERVICE_PORT,
+    user: process.env.MONGODB_USER,
+    password: process.env.MONGODB_PASSWORD,
+    database: process.env.MONGODB_DATABASE
   }
 };

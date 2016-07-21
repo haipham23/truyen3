@@ -4,9 +4,7 @@
     "LoadBalancer": 1
   },
   "models": {
-    "ManagerHost": {
-      "e34c174d-9a42-4f4c-b8a4-3fe9aa422955": "{\"id\":\"e34c174d-9a42-4f4c-b8a4-3fe9aa422955\",\"host\":\"admin:6shs18ic@45.32.34.130\",\"port\":8701,\"actions\":[\"delete\",\"edit\"],\"protocol\":\"http\",\"created\":1468217039246,\"error\":{\"message\":\"connect ETIMEDOUT 45.32.34.130:8701\"},\"errorType\":\"unknown\",\"app\":null,\"processes\":null,\"$$hashKey\":\"object:141\",\"isHostProblem\":true}"
-    },
+    "ManagerHost": {},
     "LoadBalancer": {}
   }
 }

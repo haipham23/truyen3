@@ -34,11 +34,11 @@
     "public": false
   },
   "Book": {
-    "dataSource": "mongodb",
+    "dataSource": "db",
     "public": true
   },
   "Chapter": {
-    "dataSource": "mongodb",
+    "dataSource": "db",
     "public": true
   }
 }

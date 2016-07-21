@@ -1,16 +1,32 @@
-# We're starting from the Node.js 0.12.7 container
 FROM node:4.4.7
 
-# INSTALL any further tools you need here so they are cached in the docker build
-RUN npm install -g npm
+ENV APP_DIR=/opt/truyen
 
-# Set the WORKDIR to /app so all following commands run in /app
-WORKDIR /app
+# NPM package cache
+COPY package.json /tmp/package.json
+RUN \
+    cd /tmp && \
+    npm install --production && \
+    npm cache clean
 
-# COPY the package.json and if you use npm shrinkwrap the npm-shrinkwrap.json and
-# install npm dependencies before copying the whole code into the container.
-COPY package.json ./
-RUN npm install
+# Application setup
+RUN \
+  mkdir ${APP_DIR} && \
+  mkdir ${APP_DIR}/log && \
+  cp -a /tmp/node_modules/ ${APP_DIR}
 
-# After installing dependencies copy the whole codebase into the Container to not invalidate the cache before
-COPY . ./
+COPY client ${APP_DIR}/client
+COPY common ${APP_DIR}/common
+COPY server ${APP_DIR}/server
+COPY package.json ${APP_DIR}/package.json
+
+RUN chown -R www-data.www-data ${APP_DIR}
+
+USER www-data
+
+WORKDIR ${APP_DIR}
+
+EXPOSE 3000
+EXPOSE 8080
+
+CMD ["npm", "start"]
